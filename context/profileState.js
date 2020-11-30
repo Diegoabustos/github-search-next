@@ -13,7 +13,7 @@ const ProfileState = (props) => {
     const initialState = {
         enterProfile: '',
         profileInfo: '',
-        repositoriesInfo: ''
+        repositoriesInfo: '',
     };
 
     // Dispatch to execute the actions

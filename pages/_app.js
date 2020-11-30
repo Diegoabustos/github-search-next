@@ -1,4 +1,5 @@
 import ProfileState from '../context/profileState'
+import '../static/styles.css'
 
 
 const MyApp = ({ Component, pageProps }) => {

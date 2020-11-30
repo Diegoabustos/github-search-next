@@ -1,5 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import profileContext from '../context/profileContext'
+import '../static/styles.css'
+
 
 const CardProfile = () => {
 
@@ -30,28 +32,24 @@ const CardProfile = () => {
 
 
     return (
-        <div className="row mt-4  justify-content-center">
-
-            <div className="row people">
-                <div className="col-md-6 col-lg-4 item">
-                    <div className="box"><img className="rounded-circle" src={avatar} />
-                        <h3 className="name">{login}</h3>
-                        <p className="title">{name}</p>
-                        <p className="description">{description}</p>
-                        <p className="description">{location}</p>
-                        <div className="social">
-                            <a href="#"><i className="fa fa-facebook-official">
-                            </i>
-                            </a>
-                            <a href="#">
-                                <i className="fa fa-twitter">
-                                </i>
-                            </a>
-                            <a href="#">
-                                <i className="fa fa-instagram"></i></a></div>
+        <div>
+            {
+                profileInfo ?
+                <div className="row mt-4  justify-content-center">
+                    <div className="row people">
+                        <div className="col-md-6 col-lg-4 item">
+                            <div className="box"><img className="rounded-circle" src={avatar} />
+                                <h3 className="name">{login}</h3>
+                                <p className="title">{name}</p>
+                                <p className="description">{description}</p>
+                                <p className="description">{location}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            : null
+            }
+
         </div>
     );
 }

@@ -19,12 +19,19 @@ const Form = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        const url = `https://api.github.com/users/${profile}`
-        const urlRepos = `https://api.github.com/users/${profile}/repos`
-        const response = await axios.get(url)
-        const responseRepos = await axios.get(urlRepos)
-        profileInfoFn(response)
-        repositoriesInfoFn(responseRepos)
+
+        // Validate
+        if (profile) {
+            const url = `https://api.github.com/users/${profile}`
+            const urlRepos = `https://api.github.com/users/${profile}/repos`
+            const response = await axios.get(url)
+            const responseRepos = await axios.get(urlRepos)
+            profileInfoFn(response)
+            repositoriesInfoFn(responseRepos)
+        } else {
+            console.log('aqui')
+        }
+        
     }
 
 
@@ -37,6 +44,7 @@ const Form = () => {
                 <SearchField />
             </div>
         </div>
+        
         <div className="row mt-4  justify-content-center">
             <div className="col-md-4">
                 <input type="submit" className="btn btn-block btn-primary" value="Search"/>

@@ -11,10 +11,14 @@ const Layout = ({children}) => {
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/litera/bootstrap.min.css"/>
             <link href="/static/styles.css" rel="stylesheet" />
         </Head>
-        <Header />
-        <div className="container p-4">
+
+        <div className="team-boxed">
+            <Header />
+            <div class="container">
             {children}
+            </div>
         </div>
+        
         
         </>
 
