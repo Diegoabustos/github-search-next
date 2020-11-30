@@ -15,13 +15,17 @@ const Header = () => {
     const clearRepos = () => {
       repositoriesInfoFn('')
     }
+    const clearAll = () => {
+      profileInfoFn('')
+      repositoriesInfoFn('')
+    }
  
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
 
       <Link href="/">
-        <a className="navbar-brand" href="#">Home</a>
+        <a onClick={clearAll} className="navbar-brand" href="#">Home</a>
       </Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon" />
