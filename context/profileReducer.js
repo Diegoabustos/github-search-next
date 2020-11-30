@@ -2,6 +2,7 @@ import {
     ENTER_PROFILE,
     INFO_USER,
     INFO_REPOS,
+    VALIDATE_FORM
 } from '../types';
 
 export default (state, action) => {
@@ -21,5 +22,7 @@ export default (state, action) => {
                 ...state,
                 repositoriesInfo: action.payload
             }
+        default:
+            return state;
     }
 }

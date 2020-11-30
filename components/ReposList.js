@@ -26,5 +26,5 @@ const ReposList = () => {
         </div>
     );
 }
- 
+
 export default ReposList;
