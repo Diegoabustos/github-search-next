@@ -2,7 +2,9 @@ import React, { useReducer } from 'react';
 import profileContext from './profileContext';
 import profileReducer from './profileReducer';
 import {
-    ENTER_PROFILE
+    ENTER_PROFILE,
+    INFO_USER,
+    INFO_REPOS,
 } from '../types';
 
 

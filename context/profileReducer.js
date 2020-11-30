@@ -1,5 +1,7 @@
 import { 
-    ENTER_PROFILE
+    ENTER_PROFILE,
+    INFO_USER,
+    INFO_REPOS,
 } from '../types';
 
 export default (state, action) => {
