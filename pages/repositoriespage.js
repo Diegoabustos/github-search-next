@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
 import Form from '../components/Form';
-import CardRepositories from '../components/CardRepositories';
+import ReposList from '../components/ReposList';
 
 
 const RepositoriesPage = () => {
@@ -9,7 +9,7 @@ const RepositoriesPage = () => {
             <Layout>
                 <Form />
                 <div className="col-md-auto">
-                    <CardRepositories />
+                    <ReposList />
                 </div>
             </Layout>
         </div>
