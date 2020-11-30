@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const Form = () => {
     const profilesContext = useContext(profileContext);
-    const { enterProfile, profileInfoFn, repositoriesInfoFn } = profilesContext
+    const { enterProfile, profileInfoFn, repositoriesInfoFn, enterProfileFn } = profilesContext
 
     const [ profile, setProfile ] = useState('')
 
@@ -31,7 +31,6 @@ const Form = () => {
         } else {
             console.log('aqui')
         }
-        
     }
 
 

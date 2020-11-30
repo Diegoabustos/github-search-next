@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Link from "next/link";
+import profileContext from '../context/profileContext'
+
 
 
 const Header = () => {
 
+  const profilesContext = useContext(profileContext);
+    const { enterProfile, profileInfoFn, repositoriesInfoFn, enterProfileFn } = profilesContext
+
+    const clearProfile = () => {
+      profileInfoFn('')
+    }
+    const clearRepos = () => {
+      repositoriesInfoFn('')
+    }
+ 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link href="/">
@@ -17,12 +29,12 @@ const Header = () => {
 
           <li className="nav-item">
             <Link href="/profilepage">
-              <a className="nav-link">Profiles</a>
+              <a  onClick={clearRepos} className="nav-link">Profile</a>
             </Link>
           </li>
           <li className="nav-item">
             <Link href="/repositoriespage">
-              <a className="nav-link">Repositories</a>
+              <a onClick={clearProfile} className="nav-link">Repositories</a>
             </Link>
           </li>
 
