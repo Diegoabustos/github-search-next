@@ -1,10 +1,11 @@
 import Layout from '../components/Layout';
+import Form from '../components/Form';
 
 const ProfilePage = () => {
     return (
         <div>
             <Layout>
-                <h2>Profile</h2>
+                <Form />
             </Layout>
         </div>
     )

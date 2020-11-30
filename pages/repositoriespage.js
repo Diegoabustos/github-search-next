@@ -1,10 +1,12 @@
 import Layout from '../components/Layout';
+import Form from '../components/Form';
+
 
 const RepositoriesPage = () => {
     return (
         <div>
             <Layout>
-                <h2>Repos</h2>
+                <Form />
             </Layout>
         </div>
     )
