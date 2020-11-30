@@ -18,6 +18,8 @@ const Header = () => {
  
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container">
+
       <Link href="/">
         <a className="navbar-brand" href="#">Home</a>
       </Link>
@@ -25,11 +27,11 @@ const Header = () => {
         <span className="navbar-toggler-icon" />
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
+        <ul className="navbar-nav ml-auto">
 
           <li className="nav-item">
             <Link href="/profilepage">
-              <a  onClick={clearRepos} className="nav-link">Profile</a>
+              <a  onClick={clearRepos} className="nav-link js-scroll-trigger">Profile</a>
             </Link>
           </li>
           <li className="nav-item">
@@ -39,6 +41,7 @@ const Header = () => {
           </li>
 
         </ul>
+      </div>
       </div>
     </nav>
   )

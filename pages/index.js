@@ -5,7 +5,10 @@ export default function Home() {
   return (
     <div>
       <Layout>
-        <h2>Desde Index</h2>
+        <div className="container text-center pt-5">
+          <h1>GitHub Profiles Finder App</h1>
+          <p class="lead">Welcome to the application that searches for profiles and repositories using the github api. Navigate to the search you want.</p>
+        </div>
       </Layout>
     </div>
   )
