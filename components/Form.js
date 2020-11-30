@@ -30,7 +30,8 @@ const Form = () => {
             profileInfoFn(response)
             repositoriesInfoFn(responseRepos)
         } else {
-            console.log('wothout profile')
+            // task: Add validation. show an alert that indicates that the field is empty
+            console.log('the field is empty')
         }
     }
 
@@ -51,7 +52,7 @@ const Form = () => {
             </div>
         </div>
         </form>
-     );
+    );
 }
- 
+
 export default Form;

@@ -16,5 +16,5 @@ const CardRepositories = ({repositorie}) => {
         
     );
 }
- 
+
 export default CardRepositories;

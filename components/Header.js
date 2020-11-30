@@ -22,7 +22,7 @@ const Header = () => {
       profileInfoFn('')
       repositoriesInfoFn('')
     }
- 
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
