@@ -7,15 +7,18 @@ import profileContext from '../context/profileContext'
 const Header = () => {
 
   const profilesContext = useContext(profileContext);
-    const { enterProfile, profileInfoFn, repositoriesInfoFn, enterProfileFn } = profilesContext
+    const { profileInfoFn, repositoriesInfoFn, enterProfileFn } = profilesContext
 
     const clearProfile = () => {
+      enterProfileFn('')
       profileInfoFn('')
     }
     const clearRepos = () => {
+      enterProfileFn('')
       repositoriesInfoFn('')
     }
     const clearAll = () => {
+      enterProfileFn('')
       profileInfoFn('')
       repositoriesInfoFn('')
     }
