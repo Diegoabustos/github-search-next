@@ -1,10 +1,13 @@
 import Layout from '../components/Layout';
+import Form from '../components/Form';
+import CardProfile from '../components/CardProfile';
 
 const ProfilePage = () => {
     return (
         <div>
             <Layout>
-                <h2>Profile</h2>
+                <Form />
+                <CardProfile />
             </Layout>
         </div>
     )
