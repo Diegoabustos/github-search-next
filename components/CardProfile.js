@@ -4,23 +4,23 @@ const CardProfile = () => {
     return (
         <div className="row mt-4  justify-content-center">
 
-        <div class="row people">
-                    <div class="col-md-6 col-lg-4 item">
-                        <div class="box"><img class="rounded-circle" src="https://lh3.googleusercontent.com/-JM2xsdjz2Bw/AAAAAAAAAAI/AAAAAAAAAAA/DVECr-jVlk4/photo.jpg"/>
-                            <h3 class="name">username</h3>
-                            <p class="title">name</p>
-                            <p class="description">description</p>
-                            <p class="description">location</p>
-                            <div class="social">
-                                <a href="#"><i class="fa fa-facebook-official">
+        <div className="row people">
+                    <div className="col-md-6 col-lg-4 item">
+                        <div className="box"><img className="rounded-circle" src="https://lh3.googleusercontent.com/-JM2xsdjz2Bw/AAAAAAAAAAI/AAAAAAAAAAA/DVECr-jVlk4/photo.jpg"/>
+                            <h3 className="name">username</h3>
+                            <p className="title">name</p>
+                            <p className="description">description</p>
+                            <p className="description">location</p>
+                            <div className="social">
+                                <a href="#"><i className="fa fa-facebook-official">
                                     </i>
                                 </a>
                             <a href="#">
-                                <i class="fa fa-twitter">
+                                <i className="fa fa-twitter">
                                     </i>
                                     </a>
                                     <a href="#">
-                                        <i class="fa fa-instagram"></i></a></div>
+                                        <i className="fa fa-instagram"></i></a></div>
                         </div>
                     </div>
                 </div>

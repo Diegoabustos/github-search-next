@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import profileContext from '../context/profileContext'
 
 
 const Form = () => {
+    const profilesContext = useContext(profileContext);
+    const { enterProfileFn } = profilesContext
+
+    const onChange = e => {
+        enterProfileFn(e.target.value)
+    }
     return ( 
         <>
         <div className="row mt-4  justify-content-center">
             <div className="col-md-4">
                 <input 
-                    // onChange={(e) => onChange(e)} 
-                    class="form-control" 
+                    onChange={onChange} 
+                    className="form-control" 
                     type="text" 
                     placeholder="GitHub Username"
                 />
