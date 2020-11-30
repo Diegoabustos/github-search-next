@@ -1,24 +1,40 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import profileContext from '../context/profileContext'
+import SearchField from '../components/SeacrhField'
+import axios from 'axios';
+
 
 
 const Form = () => {
     const profilesContext = useContext(profileContext);
-    const { enterProfileFn } = profilesContext
+    const { enterProfile, profileInfoFn, repositoriesInfoFn } = profilesContext
 
-    const onChange = e => {
-        enterProfileFn(e.target.value)
+    const [ profile, setProfile ] = useState('')
+
+    React.useEffect(() => {
+        if (enterProfile) {
+            setProfile(enterProfile)
+        }
+    }, [enterProfile])
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        const url = `https://api.github.com/users/${profile}`
+        const urlRepos = `https://api.github.com/users/${profile}/repos`
+        const response = await axios.get(url)
+        const responseRepos = await axios.get(urlRepos)
+        profileInfoFn(response)
+        repositoriesInfoFn(responseRepos)
     }
+
+
     return ( 
-        <>
+        <form
+            onSubmit={onSubmit}
+        >
         <div className="row mt-4  justify-content-center">
             <div className="col-md-4">
-                <input 
-                    onChange={onChange} 
-                    className="form-control" 
-                    type="text" 
-                    placeholder="GitHub Username"
-                />
+                <SearchField />
             </div>
         </div>
         <div className="row mt-4  justify-content-center">
@@ -26,7 +42,7 @@ const Form = () => {
                 <input type="submit" className="btn btn-block btn-primary" value="Search"/>
             </div>
         </div>
-        </>
+        </form>
      );
 }
  
