@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import profileContext from '../context/profileContext'
 import SearchField from '../components/SeacrhField'
 import axios from 'axios';
+import { ToastContainer } from 'react-toastify';
+
 
 
 
@@ -29,7 +31,7 @@ const Form = () => {
             profileInfoFn(response)
             repositoriesInfoFn(responseRepos)
         } else {
-            console.log('aqui')
+            console.log('without profile input')
         }
     }
 
@@ -43,7 +45,7 @@ const Form = () => {
                 <SearchField />
             </div>
         </div>
-        
+        <ToastContainer />
         <div className="row mt-4  justify-content-center">
             <div className="col-md-4">
                 <input type="submit" className="btn btn-block btn-primary" value="Search"/>
